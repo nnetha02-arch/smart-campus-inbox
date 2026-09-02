@@ -1,0 +1,130 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.navbar {
+  background: var(--primary);
+  color: white;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.stats-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-box h2 { margin: 0; font-size: 28px; }
+.stat-box p { margin: 4px 0 0; color: var(--muted); }
+
+form { display: flex; flex-direction: column; gap: 12px; }
+
+input, select, textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover { background: var(--primary-dark); }
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.Pending { background: #fef3c7; color: var(--warning); }
+.badge.In-Progress, .badge.InProgress { background: #dbeafe; color: var(--primary); }
+.badge.Resolved { background: #dcfce7; color: var(--success); }
+.badge.Rejected { background: #fee2e2; color: var(--danger); }
+
+.badge.High { background: #fee2e2; color: var(--danger); }
+.badge.Medium { background: #fef3c7; color: var(--warning); }
+.badge.Low { background: #e5e7eb; color: var(--muted); }
+
+.complaint-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.error-text { color: var(--danger); font-size: 14px; }
+
+.auth-box {
+  max-width: 400px;
+  margin: 60px auto;
+}
+
+.link-btn {
+  background: none;
+  color: var(--primary);
+  padding: 0;
+  font-weight: 500;
+}
